@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>200k messages!</title>
+    <link rel="stylesheet" href="200k.css">
+</head>
+<body>
+    <h1>200k messages!!! </h1>
+    <h3>I enjoy speaking with you so much, my love. So happy to be with you :) 
+        P.S. click the cat ! 
+    </h3>
+    <img id="kitty" src="cats/1.jpeg" alt="kitty" />
+
+    <script>
+        function createConfetti() {
+            Array.from({ length: 50 }).forEach(() => {
+            let confetti = document.createElement('div');
+            confetti.className = 'confetti';
+            document.body.appendChild(confetti);
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.top = "-10px";
+            confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
+            });
+        }
+        const images = [
+            "cats/2.jpeg",
+            "cats/1.jpeg",
+            "cats/3.jpeg",
+            "cats/4.jpeg",
+            "cats/5.jpeg",
+            "cats/6.jpeg",
+            "cats/7.jpeg",
+            "cats/8.jpeg",
+            "cats/9.jpeg",
+            "cats/10.jpeg",
+            "cats/11.jpeg",
+            "cats/12.jpeg",
+            "cats/13.jpeg",
+            "cats/14.jpeg",
+            "cats/15.jpeg",
+        ];
+        let currentIndex = 0;
+        const kitty = document.getElementById("kitty");
+        kitty.addEventListener("click", () => {
+            currentIndex = (currentIndex + 1) % images.length;
+            kitty.src = images[currentIndex];
+        });
+    createConfetti();
+    </script>
+</body>
+</html>
